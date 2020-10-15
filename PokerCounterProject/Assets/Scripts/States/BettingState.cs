@@ -29,13 +29,18 @@ namespace States
         {
             // First betting state in a round
             if (_numberOfBets == 0)
+            {
                 _currentPlayerIndex = RoundController.Instance.CurrentRound.FirstPlayerIndex;
+                GameController.BettingPointsPanel.Initialize();
+                GameController.bettingWindow.Initialize();
+            }
 
             _currentPlayer = gameController.Players[_currentPlayerIndex];
         }
 
         public override void Enter()
         {
+            GameController.BettingStateContent.SetActive(true);
             switch (RoundController.Instance.CurrentRound.TypeOfRound)
             {
                 case Round.RoundType.Regular:
@@ -43,13 +48,9 @@ namespace States
                 case Round.RoundType.Trumpless:
                     Debug.LogError("You are in a betting state!");
             
-                    GameController.PointsPanel.Highlight(_currentPlayerIndex);
-
-                    var go = Resources.Load<GameObject>("Prefabs/Windows/WideBettingWindow");
-                    var bettingWindowGO = Object.Instantiate(go, GameController.Instance.Canvas);
-                    bettingWindowGO.transform.localPosition = new Vector2(0, -155);
-                    _bettingWindow = bettingWindowGO.GetComponent<BettingWindow>();
-                    _bettingWindow.Initialize();
+                    GameController.BettingPointsPanel.Highlight(_currentPlayerIndex);
+                    
+                    _bettingWindow = GameController.bettingWindow;
                     TrySetForbiddenBetCount(_bettingWindow);
                     _bettingWindow.OnConfirmed += OnBetConfirmed;
                     break;
@@ -72,12 +73,10 @@ namespace States
         {
             _bettingWindow.OnConfirmed -= OnBetConfirmed;
 
-            Object.Destroy(_bettingWindow.gameObject);
-
             _currentPlayer.MakeBet(betCount, isBlind);
             
-            GameController.PointsPanel.UpdateBetInfo(_currentPlayerIndex);
-            GameController.PointsPanel.Unhighlight(_currentPlayerIndex);
+            GameController.BettingPointsPanel.UpdateBetInfo(_currentPlayerIndex);
+            GameController.BettingPointsPanel.Unhighlight(_currentPlayerIndex);
 
             _numberOfBets++;
             _currentPlayerIndex++;
@@ -96,11 +95,12 @@ namespace States
             {
                 _numberOfBets = 0;
                 Debug.LogError("No more bets!");
+                GameController.BettingStateContent.SetActive(false);
                 GameController.ChangeState(new TurnState(GameController));
             }
             else
             {
-                GameController.Instance.ChangeState(new BettingState(GameController));
+                GameController.ChangeState(new BettingState(GameController));
             }
         }
     }

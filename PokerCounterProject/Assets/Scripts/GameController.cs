@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using Windows;
 using States;
 using UnityEngine;
 using Random = System.Random;
 
 public class GameController : StateMachine
 {
+    [Header("Game Controller")]
     [SerializeField] private RectTransform canvas;
-    [SerializeField] private PointsPanel pointsPanel;
+    [SerializeField] private PointsPanel bettingPointsPanel;
+
+    [Header("Windows")]
+    [SerializeField] public NameInputWindow inputWindow;
+    [SerializeField] public BettingWindow bettingWindow;
 
     public const int NumberOfPlayers = 4;
     
     public static GameController Instance;
 
     public RectTransform Canvas => canvas;
-    public PointsPanel PointsPanel => pointsPanel;
+    public PointsPanel BettingPointsPanel => bettingPointsPanel;
     public List<Player> Players { get; private set; }
     
     private Random _random;
@@ -22,6 +28,7 @@ public class GameController : StateMachine
 
     private void Start()
     {
+        
         if (Instance == null)
             Instance = this;
         else if (Instance == this)
@@ -30,19 +37,21 @@ public class GameController : StateMachine
         DontDestroyOnLoad(gameObject);
         
         Initialize();
-        ChangeState(new NewRoundState(this));
+        ChangeState(new StartingState(this));
+        // ChangeState(new NewRoundState(this));
     }
 
     private void Initialize()
     {
-        _random = new Random();
-        Players = new List<Player> {new Player("Kostya"), new Player("Stas"), new Player("Egor"), new Player("Sasha")};
-        _firstPlayerIndex = _random.Next(NumberOfPlayers);
+        // _random = new Random();
+        // Players = new List<Player> {new Player("Kostya"), new Player("Stas"), new Player("Egor"), new Player("Sasha")};
+        Players = new List<Player>();
+        // _firstPlayerIndex = _random.Next(NumberOfPlayers);
+        //
+        // var roundController = new RoundController(_firstPlayerIndex);
+        // roundController.Initialize();
 
-        var roundController = new RoundController(_firstPlayerIndex);
-        roundController.Initialize();
-
-        pointsPanel.Initialize();
+        // pointsPanel.Initialize();
     }
 
     private void Update()
