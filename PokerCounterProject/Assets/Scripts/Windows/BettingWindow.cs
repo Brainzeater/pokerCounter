@@ -30,6 +30,10 @@ namespace Windows
             {
                 _forbiddenBetCount = value;
                 OnLessButtonClick();
+                if (value == 0)
+                {
+                    isBlindButton.interactable = true;
+                }
             }
         }
 
@@ -44,16 +48,19 @@ namespace Windows
         {
             _currentRound = RoundController.Instance.CurrentRound;
             
-            _betCount = 0;
-            betCountText.SetText("0");
-            
             _isCurrentRoundBlind = _currentRound.TypeOfRound == Round.RoundType.Blind;
-            
-            OnIsBlindButtonClick();
-            
-            _isBlind = false;
+            ResetBettingWindow();
             _forbiddenBetCount = -1;
             AttachListeners();
+        }
+
+        public void ResetBettingWindow()
+        {
+            _betCount = 0;
+            betCountText.SetText("0");
+            OnIsBlindButtonClick();
+            _isBlind = false;
+            
         }
 
         private void AttachListeners()
@@ -110,7 +117,7 @@ namespace Windows
             _betCount = Mathf.Clamp(++_betCount, 0, maxBet);
             betCountText.SetText(_betCount.ToString());
             
-            if (turnOnIsBlindButton)
+            if (turnOnIsBlindButton && _betCount != 0)
             {
                 isBlindButton.interactable = true;
             }

@@ -35,6 +35,7 @@ namespace States
                 GameController.bettingWindow.Initialize();
             }
 
+            
             _currentPlayer = gameController.Players[_currentPlayerIndex];
         }
 
@@ -100,6 +101,7 @@ namespace States
             }
             else
             {
+                GameController.bettingWindow.ResetBettingWindow();
                 GameController.ChangeState(new BettingState(GameController));
             }
         }
