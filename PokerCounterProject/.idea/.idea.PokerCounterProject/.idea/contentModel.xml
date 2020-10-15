@@ -24,9 +24,10 @@
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">
             <e p="BettingState.cs" t="Include" />
+            <e p="GameState.cs" t="Include" />
             <e p="NewRoundState.cs" t="Include" />
+            <e p="ScoringState.cs" t="Include" />
             <e p="StartingState.cs" t="Include" />
-            <e p="TurnState.cs" t="Include" />
           </e>
           <e p="Windows" t="Include">
             <e p="BettingWindow.cs" t="Include" />

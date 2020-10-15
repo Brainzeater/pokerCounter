@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Windows;
 using States;
+using TMPro;
 using UnityEngine;
 using Random = System.Random;
 
@@ -10,6 +11,8 @@ public class GameController : StateMachine
     [Header("Game Controller")]
     [SerializeField] private RectTransform canvas;
     [SerializeField] private PointsPanel bettingPointsPanel;
+    [SerializeField] public TextMeshProUGUI bettingRoundTitle;
+    [SerializeField] public TextMeshProUGUI gameRoundTitle;
 
     [Header("Windows")]
     [SerializeField] public NameInputWindow inputWindow;
@@ -43,6 +46,11 @@ public class GameController : StateMachine
 
     private void Initialize()
     {
+        StartingStateContent.SetActive(false);
+        BettingStateContent.SetActive(false);
+        GameStateContent.SetActive(false);
+        ScoringStateContent.SetActive(false);
+        FinishGameStateContent.SetActive(false);
         // _random = new Random();
         // Players = new List<Player> {new Player("Kostya"), new Player("Stas"), new Player("Egor"), new Player("Sasha")};
         Players = new List<Player>();

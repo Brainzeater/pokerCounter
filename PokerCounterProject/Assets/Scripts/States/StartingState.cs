@@ -1,45 +1,45 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using States;
 
-public class StartingState : State
+namespace States
 {
-    private Random _random;
-    public StartingState(GameController gameController) : base(gameController)
+    public class StartingState : State
     {
-    }
-
-    public override void Enter()
-    {
-        GameController.StartingStateContent.SetActive(true);
-        GameController.inputWindow.SetPlayerIndex(GameController.Players.Count);
-        GameController.inputWindow.OnNameSubmitted += OnNameSubmitted;
-    }
-
-    private void OnNameSubmitted(string name)
-    {
-        GameController.inputWindow.OnNameSubmitted -= OnNameSubmitted;
-        var player = new Player(name);
-        GameController.Players.Add(player);
-        Exit();
-    }
-
-    public override void Exit()
-    {
-        if (GameController.Players.Count < GameController.NumberOfPlayers)
+        private Random _random;
+        public StartingState(GameController gameController) : base(gameController)
         {
-            GameController.ChangeState(new StartingState(GameController));
         }
-        else
+
+        public override void Enter()
         {
-            _random = new Random();
-            var randomPlayer = _random.Next(GameController.NumberOfPlayers);
-            new RoundController(randomPlayer);
-            RoundController.Instance.Initialize();
+            GameController.StartingStateContent.SetActive(true);
+            GameController.inputWindow.SetPlayerIndex(GameController.Players.Count);
+            GameController.inputWindow.OnNameSubmitted += OnNameSubmitted;
+        }
+
+        private void OnNameSubmitted(string name)
+        {
+            GameController.inputWindow.OnNameSubmitted -= OnNameSubmitted;
+            var player = new Player(name);
+            GameController.Players.Add(player);
+            Exit();
+        }
+
+        public override void Exit()
+        {
+            if (GameController.Players.Count < GameController.NumberOfPlayers)
+            {
+                GameController.ChangeState(new StartingState(GameController));
+            }
+            else
+            {
+                _random = new Random();
+                var randomPlayer = _random.Next(GameController.NumberOfPlayers);
+                new RoundController(randomPlayer);
+                RoundController.Instance.Initialize();
             
-            GameController.StartingStateContent.SetActive(false);
-            GameController.ChangeState(new BettingState(GameController));
+                GameController.StartingStateContent.SetActive(false);
+                GameController.ChangeState(new BettingState(GameController));
+            }
         }
     }
 }

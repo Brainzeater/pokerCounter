@@ -31,6 +31,16 @@ namespace States
             if (_numberOfBets == 0)
             {
                 _currentPlayerIndex = RoundController.Instance.CurrentRound.FirstPlayerIndex;
+                var currentRound = RoundController.Instance.CurrentRound;
+                if (currentRound.TypeOfRound == Round.RoundType.Regular)
+                {
+                    GameController.bettingRoundTitle.SetText(currentRound.NumOfCardsInHand.ToString());
+                }
+                else
+                {
+                    GameController.bettingRoundTitle.SetText(currentRound.TypeOfRound.ToString());
+                }
+                
                 GameController.BettingPointsPanel.Initialize();
                 GameController.bettingWindow.Initialize();
             }
@@ -57,8 +67,11 @@ namespace States
                     break;
                 
                 default:
-                    throw new Exception($"You are not supposed to be betting in " +
+                    Debug.LogError($"You are not supposed to be betting in " +
                                         $"{RoundController.Instance.CurrentRound.TypeOfRound}!");
+                    _numberOfBets = GameController.NumberOfPlayers;
+                    Exit();
+                    break;
             }
         }
 
@@ -84,8 +97,6 @@ namespace States
             if (_currentPlayerIndex >= GameController.NumberOfPlayers)
                 _currentPlayerIndex = 0;
 
-            Debug.LogError($"{_currentPlayer}: {betCount} {isBlind}");
-
             Exit();
         }
 
@@ -97,7 +108,7 @@ namespace States
                 _numberOfBets = 0;
                 Debug.LogError("No more bets!");
                 GameController.BettingStateContent.SetActive(false);
-                GameController.ChangeState(new TurnState(GameController));
+                GameController.ChangeState(new GameState(GameController));
             }
             else
             {
