@@ -4,16 +4,30 @@
     {
         public GameState(GameController gameController) : base(gameController)
         {
+        }
+
+        public override void Enter()
+        {
             GameController.GameStateContent.SetActive(true);
             var currentRound = RoundController.Instance.CurrentRound;
             if (currentRound.TypeOfRound == Round.RoundType.Regular)
             {
-                GameController.bettingRoundTitle.SetText(currentRound.NumOfCardsInHand.ToString());
+                GameController.gameRoundTitle.SetText(currentRound.NumOfCardsInHand.ToString());
             }
             else
             {
-                GameController.bettingRoundTitle.SetText(currentRound.TypeOfRound.ToString());
+                GameController.gameRoundTitle.SetText(currentRound.TypeOfRound.ToString());
             }
+
+            GameController.idlePointsPanel.Initialize();
+            GameController.finishRoundButton.onClick.AddListener(Exit);
+        }
+
+        public override void Exit()
+        {
+            GameController.idlePointsPanel.Reset();
+            GameController.GameStateContent.SetActive(false);
+            GameController.ChangeState(new ScoringState(GameController));
         }
     }
 }

@@ -20,14 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c62256d3-2cdc-424f-a837-aae25f027747" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IdlePointsPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IdlePointsPanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScoringPointsPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScoringPointsPanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/States/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PokerCounterProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PokerCounterProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PokerCounterProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PokerCounterProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/BettingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/BettingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/StartingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/StartingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/TurnState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/TurnState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerPointsCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerPointsCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/State.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/State.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/State.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/ScoringState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/ScoringState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +47,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/ScoringWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/States/StartingState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/States/GameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/a5/5612b8e1/Random.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NameInputWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoringPointsPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -50,9 +75,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/NameInputWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Windows/BettingWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/States/BettingState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/States/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/States/StartingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IdlePointsPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/State.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerPointsCard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoringPointsPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Windows/ScoringWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RoundController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/ScoringState.cs" />
       </list>
     </option>
   </component>
@@ -94,10 +127,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19696">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33168">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19696" />
+      <option name="pid" value="33168" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -112,7 +145,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602787592474</updated>
-      <workItem from="1602787597861" duration="7717000" />
+      <workItem from="1602787597861" duration="8224000" />
+      <workItem from="1602869663642" duration="8772000" />
     </task>
     <servers />
   </component>
@@ -131,116 +165,121 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="232" key="GridCell.Tab.0.bottom" timestamp="1602795374058">
+    <state width="1877" height="232" key="GridCell.Tab.0.bottom" timestamp="1602878846877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602795374058" />
-    <state width="1877" height="232" key="GridCell.Tab.0.center" timestamp="1602795374058">
+    <state width="1877" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846877" />
+    <state width="1877" height="232" key="GridCell.Tab.0.center" timestamp="1602878846877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602795374058" />
-    <state width="1877" height="232" key="GridCell.Tab.0.left" timestamp="1602795374058">
+    <state width="1877" height="232" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846877" />
+    <state width="1877" height="232" key="GridCell.Tab.0.left" timestamp="1602878846877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602795374058" />
-    <state width="1877" height="232" key="GridCell.Tab.0.right" timestamp="1602795374058">
+    <state width="1877" height="232" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846877" />
+    <state width="1877" height="232" key="GridCell.Tab.0.right" timestamp="1602878846877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602795374058" />
-    <state width="1877" height="232" key="GridCell.Tab.1.bottom" timestamp="1602795377095">
+    <state width="1877" height="232" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846877" />
+    <state width="1877" height="232" key="GridCell.Tab.1.bottom" timestamp="1602878935913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602795377095" />
-    <state width="1877" height="232" key="GridCell.Tab.1.center" timestamp="1602795377095">
+    <state width="1877" height="232" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602878935913" />
+    <state width="1877" height="232" key="GridCell.Tab.1.center" timestamp="1602878935913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602795377095" />
-    <state width="1877" height="232" key="GridCell.Tab.1.left" timestamp="1602795377095">
+    <state width="1877" height="232" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602878935913" />
+    <state width="1877" height="232" key="GridCell.Tab.1.left" timestamp="1602878935913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602795377095" />
-    <state width="1877" height="232" key="GridCell.Tab.1.right" timestamp="1602795377095">
+    <state width="1877" height="232" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602878935913" />
+    <state width="1877" height="232" key="GridCell.Tab.1.right" timestamp="1602878935913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602795377095" />
-    <state width="1877" height="232" key="GridCell.Tab.2.bottom" timestamp="1602795373901">
+    <state width="1877" height="232" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602878935913" />
+    <state width="1877" height="232" key="GridCell.Tab.2.bottom" timestamp="1602878846728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373901" />
-    <state width="1877" height="232" key="GridCell.Tab.2.center" timestamp="1602795373900">
+    <state width="1877" height="232" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846728" />
+    <state width="1877" height="232" key="GridCell.Tab.2.center" timestamp="1602878846728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373900" />
-    <state width="1877" height="232" key="GridCell.Tab.2.left" timestamp="1602795373900">
+    <state width="1877" height="232" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846728" />
+    <state width="1877" height="232" key="GridCell.Tab.2.left" timestamp="1602878846727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373900" />
-    <state width="1877" height="232" key="GridCell.Tab.2.right" timestamp="1602795373900">
+    <state width="1877" height="232" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846727" />
+    <state width="1877" height="232" key="GridCell.Tab.2.right" timestamp="1602878846728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373900" />
-    <state width="1877" height="232" key="GridCell.Tab.3.bottom" timestamp="1602795373901">
+    <state width="1877" height="232" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846728" />
+    <state width="1877" height="232" key="GridCell.Tab.3.bottom" timestamp="1602878846728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373901" />
-    <state width="1877" height="232" key="GridCell.Tab.3.center" timestamp="1602795373901">
+    <state width="1877" height="232" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846728" />
+    <state width="1877" height="232" key="GridCell.Tab.3.center" timestamp="1602878846728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373901" />
-    <state width="1877" height="232" key="GridCell.Tab.3.left" timestamp="1602795373901">
+    <state width="1877" height="232" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846728" />
+    <state width="1877" height="232" key="GridCell.Tab.3.left" timestamp="1602878846728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373901" />
-    <state width="1877" height="232" key="GridCell.Tab.3.right" timestamp="1602795373901">
+    <state width="1877" height="232" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846728" />
+    <state width="1877" height="232" key="GridCell.Tab.3.right" timestamp="1602878846728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="232" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602795373901" />
-    <state x="777" y="199" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602790691484">
+    <state width="1877" height="232" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602878846728" />
+    <state x="777" y="199" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602875540112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="199" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602790691484" />
+    <state x="777" y="199" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602875540112" />
+    <state x="514" y="250" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602877801208">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="514" y="250" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1602877801208" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602792797252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602792797252" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602794033506">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602878233644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602794033506" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602878233644" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Windows/BettingWindow.cs</url>
-          <line>29</line>
-          <properties documentPath="D:\Repos\Personal\PokerCounter\PokerCounterProject\Assets\Scripts\Windows\BettingWindow.cs" initialLine="29">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Windows/ScoringWindow.cs</url>
+          <line>75</line>
+          <properties documentPath="D:\Repos\Personal\PokerCounter\PokerCounterProject\Assets\Scripts\Windows\ScoringWindow.cs" initialLine="75">
             <startOffsets>
-              <option value="764" />
+              <option value="2512" />
             </startOffsets>
             <endOffsets>
-              <option value="765" />
+              <option value="2513" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Windows/BettingWindow.cs</url>
-          <line>97</line>
-          <properties documentPath="D:\Repos\Personal\PokerCounter\PokerCounterProject\Assets\Scripts\Windows\BettingWindow.cs" initialLine="97">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Windows/ScoringWindow.cs</url>
+          <line>67</line>
+          <properties documentPath="D:\Repos\Personal\PokerCounter\PokerCounterProject\Assets\Scripts\Windows\ScoringWindow.cs" initialLine="67">
             <startOffsets>
-              <option value="2939" />
+              <option value="2102" />
             </startOffsets>
             <endOffsets>
-              <option value="2940" />
+              <option value="2103" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

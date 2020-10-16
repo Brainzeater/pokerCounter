@@ -9,6 +9,7 @@ public class PlayerPointsCard : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pointsText;
     [SerializeField] private TextMeshProUGUI betCountText;
     [SerializeField] private GameObject betIsBlind;
+    [SerializeField] private TextMeshProUGUI tricksText;
     
     [Header("Background")]
     [SerializeField] private Image topBackground;
@@ -71,5 +72,11 @@ public class PlayerPointsCard : MonoBehaviour
     {
         betCountText.SetText("");
         BetIsBlind = false;
+    }
+
+    public void SetTricks(int tricks)
+    {
+        tricksText.gameObject.SetActive(true);
+        tricksText.SetText($"{tricks}/");
     }
 }

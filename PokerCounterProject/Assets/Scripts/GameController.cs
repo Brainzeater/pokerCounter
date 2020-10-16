@@ -4,19 +4,30 @@ using Windows;
 using States;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class GameController : StateMachine
 {
     [Header("Game Controller")]
     [SerializeField] private RectTransform canvas;
+    [Header("Betting state stuff")]
     [SerializeField] private PointsPanel bettingPointsPanel;
     [SerializeField] public TextMeshProUGUI bettingRoundTitle;
+    
+    [Header("Game state stuff")]
+    [SerializeField] public IdlePointsPanel idlePointsPanel;
     [SerializeField] public TextMeshProUGUI gameRoundTitle;
+    [SerializeField] public Button finishRoundButton;
+    
+    [Header("Scoring state stuff")]
+    [SerializeField] public ScoringPointsPanel scoringPointsPanel;
+    [SerializeField] public TextMeshProUGUI scoringRoundTitle;
 
     [Header("Windows")]
     [SerializeField] public NameInputWindow inputWindow;
     [SerializeField] public BettingWindow bettingWindow;
+    [SerializeField] public ScoringWindow scoringWindow;
 
     public const int NumberOfPlayers = 4;
     

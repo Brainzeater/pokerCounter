@@ -14,13 +14,14 @@
           <e p="Dealer.cs" t="Include" />
           <e p="Deck.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
+          <e p="IdlePointsPanel.cs" t="Include" />
           <e p="NameInputWindow.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerPointsCard.cs" t="Include" />
           <e p="PointsPanel.cs" t="Include" />
           <e p="Round.cs" t="Include" />
           <e p="RoundController.cs" t="Include" />
-          <e p="State.cs" t="Include" />
+          <e p="ScoringPointsPanel.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">
             <e p="BettingState.cs" t="Include" />
@@ -28,9 +29,11 @@
             <e p="NewRoundState.cs" t="Include" />
             <e p="ScoringState.cs" t="Include" />
             <e p="StartingState.cs" t="Include" />
+            <e p="State.cs" t="Include" />
           </e>
           <e p="Windows" t="Include">
             <e p="BettingWindow.cs" t="Include" />
+            <e p="ScoringWindow.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

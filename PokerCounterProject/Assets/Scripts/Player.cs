@@ -66,12 +66,13 @@ public class Player
         Tricks.Add(trick);
     }
 
-    public void CalculatePoints()
+    public void CalculatePoints(int tricks)
     {
         var gainedPoints = 0;
 
         var currentRound = RoundController.Instance.CurrentRound;
-        var tricksCount = Tricks.Count;
+        // var tricksCount = Tricks.Count;
+        var tricksCount = tricks;
 
         switch (currentRound.TypeOfRound)
         {
@@ -96,7 +97,7 @@ public class Player
                 // Shortage
                 else
                 {
-                    gainedPoints = difference * (-currentRound.BetCost) * blindCoefficient;
+                    gainedPoints = difference * (currentRound.BetCost) * blindCoefficient;
                 }
 
                 break;
@@ -118,7 +119,7 @@ public class Player
         if (gainedPoints == 0)
             throw new Exception($"{Name} gained zero points!");
 
-        Points = gainedPoints;
+        Points += gainedPoints;
         
         // TODO: после этого нужно обнулять текущую ставку, чистить взятки
     }
