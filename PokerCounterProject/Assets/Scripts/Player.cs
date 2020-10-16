@@ -123,9 +123,13 @@ public class Player
         Points += gainedPoints;
         
         // TODO: после этого нужно обнулять текущую ставку, чистить взятки
-        CurrentBet = null;
     }
 
+    public void ResetBet()
+    {
+        CurrentBet = null;
+    }
+    
     public override string ToString()
     {
         return Name;

@@ -51,6 +51,7 @@ namespace States
             GameController.scoringPointsPanel.UpdateBetInfo(_currentPlayerIndex);
             GameController.scoringPointsPanel.UpdatePointsInfo(_currentPlayerIndex);
             GameController.scoringPointsPanel.Unhighlight(_currentPlayerIndex);
+            _currentPlayer.ResetBet();
 
             _numberOfPlayers++;
             _currentPlayerIndex++;
@@ -79,7 +80,7 @@ namespace States
                 else
                 {
                     Debug.LogError("GAME OVER!");
-                    GameController.ChangeState(new GameState(GameController));
+                    GameController.ChangeState(new FinishGameState(GameController));
                 }
             }
             else

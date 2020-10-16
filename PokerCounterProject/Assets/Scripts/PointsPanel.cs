@@ -45,6 +45,8 @@ public class PointsPanel : MonoBehaviour
     {
         var pointsCard = _playerPointsCardsList[playerIndex];
         var player = GameController.Instance.Players[playerIndex];
+        
+        if (player.CurrentBet == null) return;
         pointsCard.BetCount = player.CurrentBet.Count;
         pointsCard.BetIsBlind = player.CurrentBet.Count != 0 && player.CurrentBet.IsBlind;
     }

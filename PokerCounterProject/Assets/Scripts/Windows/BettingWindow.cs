@@ -121,7 +121,7 @@ namespace Windows
             _betCount = Mathf.Clamp(++_betCount, 0, maxBet);
             betCountText.SetText(_betCount.ToString());
             
-            if (turnOnIsBlindButton && _betCount != 0)
+            if (turnOnIsBlindButton && _betCount != 0 && !_isCurrentRoundBlind)
             {
                 isBlindButton.interactable = true;
             }

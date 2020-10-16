@@ -23,6 +23,9 @@ public class GameController : StateMachine
     [Header("Scoring state stuff")]
     [SerializeField] public ScoringPointsPanel scoringPointsPanel;
     [SerializeField] public TextMeshProUGUI scoringRoundTitle;
+    
+    [Header("Finish state stuff")]
+    [SerializeField] public IdlePointsPanel finishPointsPanel;
 
     [Header("Windows")]
     [SerializeField] public NameInputWindow inputWindow;

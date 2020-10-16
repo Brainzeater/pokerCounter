@@ -25,6 +25,7 @@
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">
             <e p="BettingState.cs" t="Include" />
+            <e p="FinishGameState.cs" t="Include" />
             <e p="GameState.cs" t="Include" />
             <e p="NewRoundState.cs" t="Include" />
             <e p="ScoringState.cs" t="Include" />

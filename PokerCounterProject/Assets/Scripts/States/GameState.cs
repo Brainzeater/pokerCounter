@@ -20,6 +20,7 @@
             }
 
             GameController.idlePointsPanel.Initialize();
+            GameController.idlePointsPanel.Highlight(RoundController.Instance.CurrentRound.FirstPlayerIndex);
             GameController.finishRoundButton.onClick.AddListener(Exit);
         }
 
