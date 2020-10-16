@@ -60,7 +60,11 @@ namespace Windows
             betCountText.SetText("0");
             OnIsBlindButtonClick();
             _isBlind = false;
-            
+        }
+
+        public void Close()
+        {
+            DetachListeners();
         }
 
         private void AttachListeners()
@@ -111,8 +115,8 @@ namespace Windows
             {
                 if (ForbiddenBet == numOfCardsInHand)
                     maxBet = numOfCardsInHand - 1;
-                else if (_betCount - 1 == ForbiddenBet)
-                    --_betCount;
+                else if (_betCount + 1 == ForbiddenBet)
+                    ++_betCount;
             }
             _betCount = Mathf.Clamp(++_betCount, 0, maxBet);
             betCountText.SetText(_betCount.ToString());

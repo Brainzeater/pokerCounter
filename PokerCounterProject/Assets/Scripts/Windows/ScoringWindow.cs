@@ -41,13 +41,14 @@ namespace Windows
             {
                 _tricksCount = 0;
                 trickCountText.SetText("0");
-                OnLessButtonClick();
             }
-            else
-            {
-                _tricksCount = RoundController.Instance.CurrentRound.NumOfCardsInHand - SumOfTricks;
-                trickCountText.SetText($"{RoundController.Instance.CurrentRound.NumOfCardsInHand - SumOfTricks}");
-            }
+            
+            OnLessButtonClick();
+        }
+
+        public void Close()
+        {
+            DetachListeners();
         }
 
         private void AttachListeners()

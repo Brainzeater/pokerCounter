@@ -38,6 +38,7 @@ namespace States
         {
             GameController.scoringWindow.SumOfTricks = _sumOfTricks;
             GameController.scoringWindow.NumOfCalculatedPlayers = _numberOfPlayers;
+            GameController.scoringWindow.ResetScoringWindow();
             GameController.scoringPointsPanel.Highlight(_currentPlayerIndex);
             GameController.scoringWindow.OnConfirmed += OnPointsConfirmed;
         }
@@ -65,6 +66,9 @@ namespace States
             if (_numberOfPlayers >= GameController.NumberOfPlayers)
             {
                 _numberOfPlayers = 0;
+                _sumOfTricks = 0;
+                GameController.scoringPointsPanel.Reset();
+                GameController.scoringWindow.Close();
                 GameController.ScoringStateContent.SetActive(false);
                 RoundController.Instance.SwitchToNextRound();
 
@@ -80,7 +84,6 @@ namespace States
             }
             else
             {
-                GameController.scoringWindow.ResetScoringWindow();
                 GameController.ChangeState(new ScoringState(GameController));
             }
         }

@@ -16,12 +16,21 @@ public class PointsPanel : MonoBehaviour
             var playerCardGO = Instantiate(playerPointsCard, transform);
             var playerCardComponent = playerCardGO.GetComponent<PlayerPointsCard>();
             playerCardComponent.Name = $"{player.Name}:";
-            playerCardComponent.Points = 0;
+            playerCardComponent.Points = player.Points;
             playerCardComponent.ClearBetContent();
             _playerPointsCardsList.Add(playerCardComponent);
         }
     }
 
+    public void Reset()
+    {
+        foreach (var pointsCard in _playerPointsCardsList)
+        {
+            Destroy(pointsCard.gameObject);
+        }
+        _playerPointsCardsList.Clear();
+    }
+    
     public void Highlight(int playerIndex)
     {
         _playerPointsCardsList[playerIndex].HighlightPanel();

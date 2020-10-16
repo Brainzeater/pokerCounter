@@ -26,6 +26,7 @@ public class Player
 
     public Player(string name)
     {
+        Points = 0;
         Name = name;
         Tricks = new List<Tuple<Card, Card, Card, Card>>();
     }
@@ -122,6 +123,7 @@ public class Player
         Points += gainedPoints;
         
         // TODO: после этого нужно обнулять текущую ставку, чистить взятки
+        CurrentBet = null;
     }
 
     public override string ToString()

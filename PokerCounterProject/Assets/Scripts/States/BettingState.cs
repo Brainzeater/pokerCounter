@@ -57,8 +57,6 @@ namespace States
                 case Round.RoundType.Regular:
                 case Round.RoundType.Blind:
                 case Round.RoundType.Trumpless:
-                    Debug.LogError("You are in a betting state!");
-            
                     GameController.BettingPointsPanel.Highlight(_currentPlayerIndex);
                     
                     _bettingWindow = GameController.bettingWindow;
@@ -106,7 +104,8 @@ namespace States
             if (_numberOfBets >= GameController.NumberOfPlayers)
             {
                 _numberOfBets = 0;
-                Debug.LogError("No more bets!");
+                GameController.BettingPointsPanel.Reset();
+                GameController.bettingWindow.Close();
                 GameController.BettingStateContent.SetActive(false);
                 GameController.ChangeState(new GameState(GameController));
             }

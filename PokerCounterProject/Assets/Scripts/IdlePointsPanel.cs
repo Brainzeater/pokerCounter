@@ -24,7 +24,6 @@ public class IdlePointsPanel : MonoBehaviour
         
         _playerPointsCards[RoundController.Instance.CurrentRound.FirstPlayerIndex].HighlightPanel();
     }
-
     
     public void Reset()
     {

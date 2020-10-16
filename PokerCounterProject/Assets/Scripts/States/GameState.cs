@@ -25,6 +25,7 @@
 
         public override void Exit()
         {
+            GameController.finishRoundButton.onClick.RemoveListener(Exit);
             GameController.idlePointsPanel.Reset();
             GameController.GameStateContent.SetActive(false);
             GameController.ChangeState(new ScoringState(GameController));

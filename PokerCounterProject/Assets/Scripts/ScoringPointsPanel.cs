@@ -24,7 +24,6 @@ public class ScoringPointsPanel : MonoBehaviour
         
         _playerPointsCards[RoundController.Instance.CurrentRound.FirstPlayerIndex].HighlightPanel();
     }
-
     
     public void Reset()
     {
