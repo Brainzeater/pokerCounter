@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MatchmakingScene.unity
-    guid: af9a72d17b9fc3f4cac09d861d4a4525
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: acce0c0ec36b5f6499a5e29458b9b070
